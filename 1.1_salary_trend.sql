@@ -34,11 +34,12 @@ ADD COLUMN comparison_perc float;
 
 -- naplnění sloupce s procentuálním vyjádřením rozdílů platů v období 2006 - 2018
 UPDATE t_value_comparison_avg_salary_year 
-SET comparison_perc = CASE 
-		                    WHEN comparison IS NULL THEN NULL  
-		                    ELSE round((((avg_salary_year - previous_value) / previous_value) *100) , 2)
-	                    END;SELECT *
-  
+SET comparison_perc = 	CASE 
+		       	 	WHEN comparison IS NULL THEN NULL  
+		        	ELSE round((((avg_salary_year - previous_value) / previous_value) *100) , 2)
+	        	END;
+
+SELECT *  
 FROM t_value_comparison_avg_salary_year tvcasy ;
 
 -- DOPLŇUJÍCÍ UKAZATELÉ: 
