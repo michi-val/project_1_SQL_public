@@ -15,17 +15,17 @@ FROM v_salary_trend_help_data vsthd;
 
 -- vytvoření tabulky s porovnáním platů vzestupně
 CREATE OR REPLACE TABLE t_value_comparison_avg_salary_year AS
-SELECT 
-  payroll_year
-	,industry_branch_code 
-	,industry_branch_name 
+SELECT
+	payroll_year
+	,industry_branch_code ,industry_branch_name 
 	,avg_salary_year
 	,LAG(avg_salary_year) OVER (ORDER BY industry_branch_code , payroll_year) AS previous_value
-  ,CASE
-	  WHEN industry_branch_code != LAG(industry_branch_code) OVER (ORDER BY industry_branch_code , payroll_year) THEN  NULL
-    WHEN avg_salary_year > LAG(avg_salary_year) OVER (ORDER BY industry_branch_code , payroll_year) THEN ('higher')
-    ELSE 'not higher'
-  END AS comparison
+    	,CASE
+		WHEN industry_branch_code != LAG(industry_branch_code) OVER (ORDER BY industry_branch_code , payroll_year) THEN  NULL
+		WHEN LAG(industry_branch_code) OVER (ORDER BY industry_branch_code , payroll_year) IS NULL THEN NULL 
+        	WHEN avg_salary_year > LAG(avg_salary_year) OVER (ORDER BY industry_branch_code , payroll_year) THEN ('higher')
+        	ELSE 'not higher'
+     	END AS comparison
 FROM v_salary_trend_help_data;   
 
 -- přidání sloupce do tabulky pro dopočet procentuálního rozdílů platů
