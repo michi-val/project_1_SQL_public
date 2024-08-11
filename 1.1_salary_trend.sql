@@ -41,10 +41,37 @@ SET comparison_perc = CASE
   
 FROM t_value_comparison_avg_salary_year tvcasy ;
 
--- doplňující ukazatel: průměrný meziroční nárůst jednotlivých odvětví za celé období
+-- DOPLŇUJÍCÍ UKAZATELÉ: 
+
+-- průměrný meziroční nárůst jednotlivých odvětví za celé období
 SELECT 
 	industry_branch_name 
 	,round(avg(comparison_perc),2) avg_salary_trend
 FROM t_value_comparison_avg_salary_year tvcasy
 GROUP BY industry_branch_code 
 ORDER BY avg_salary_trend;
+
+-- procentuální nárůst mezi 2006 a 2018
+WITH 2006to2018_trend AS (
+SELECT *
+FROM 
+(SELECT 
+	industry_branch_code ibc1
+	,industry_branch_name 
+	,avg_salary_year y_2006
+FROM t_value_comparison_avg_salary_year tvcasy 
+WHERE payroll_year = 2006) AS a
+JOIN 
+(SELECT 
+	industry_branch_code 
+	,avg_salary_year y_2018
+FROM t_value_comparison_avg_salary_year tvcasy 
+WHERE payroll_year = 2018) AS b
+ON a.ibc1 = b.industry_branch_code)
+SELECT 
+	industry_branch_name 
+	,y_2006
+	,y_2018
+	,round((((y_2018-y_2006)/y_2006)*100),2) perc_diff_06_18
+FROM 2006to2018_trend
+ORDER BY perc_diff_06_18 DESC;
