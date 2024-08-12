@@ -76,3 +76,10 @@ SELECT
 	,round((((y_2018-y_2006)/y_2006)*100),2) perc_diff_06_18
 FROM 2006to2018_trend
 ORDER BY perc_diff_06_18 DESC;
+
+-- pomocný select pro zjištění počtu poklesů
+SELECT 
+	comparison 
+	,count(comparison) 
+FROM t_value_comparison_avg_salary_year tvcasy 
+GROUP BY comparison 
