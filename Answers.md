@@ -11,10 +11,18 @@ Obor Zdravotní a sociální péče oproti tomu zaznamenal nárůst nejvyšší.
 V roce 2006 byla nejnižší mzda v sektoru Ubytování, stravování a pohostinství: 11 105,75 Kč, nejvyšší v Peněžnictví a pojišťovnictví: 39 353,25 Kč. Ubytování, stravování a pohostinství si tuto ne příliš populární příčku udrželo i v roce 2018 s částkou 18 270,25 Kč, kdežto nejvyšších platů se v roce 2018 dostalo pracujícím v oboru Informační a komunikační činnosti: 55 474,75 Kč. 
 
 ## 1.2 Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
-Díky skutečnosti, že 57% růst průměrných platů mezi roky 2006 a 2018 z částky 20 342 Kč na částku 31 980 Kč předčil 50% růst průměrné ceny kilogramu chleba konzumního kmínového ze 16,12 Kč na 24,24 Kč a 37% růst průměrné ceny litru mléka plnotučného pasterovaného ze 14,44 Kč na 19,82 Kč, mohli spotřebitelé nakoupit za průměrný plat více těchto dvou komodit. 
+Díky skutečnosti, že 57% růst průměrných platů mezi roky 2006 a 2018 z částky 20 342 Kč na částku 31 980 Kč předčil 50% růst průměrné ceny kilogramu Chleba konzumního kmínového ze 16,12 Kč na 24,24 Kč a 37% růst průměrné ceny litru Mléka plnotučného pasterovaného ze 14,44 Kč na 19,82 Kč, mohli spotřebitelé nakoupit za průměrný plat více těchto dvou komodit. 
 
 V roce 2018 bylo možné za průměrný plat zakoupit přibližně 1319 kg chleba, což je o ~57 kg více, než v roce 2006. Mléko na tom bylo ještě lépe, kdy bylo možné zakoupit o ~205 l více a to přibližně 1614 l mléka.
 
 ## 1.3 Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
+
+Z celkově 27 sledovaných komodit v období let 2006 až 2018 došlo pouze u dvou ke zlevnění. 
+Největšímu poklesu ceny se těšil Cukr krystalový, který s počáteční cenou 21,73 Kč za kilogram klesl na 15,75 Kč při průměrném meziročním poklesu -1,92 %. Druhou komoditou s klesajícím trendem průměrných cen byla o -0,74 % Rajská jablka červená kulatá, která zlevnila z průměrných 57,83 Kč na 44,49 Kč za kilogram. 
+
+Na čele žebříčku zdražování se ocitly Papriky, které s celkovým více než 70% nárůstem ceny a průměrným meziročním nárůstem 7,29 % zdražily z ceny 35,31 Kč na 60,47 Kč. 
+Druhou příčku obsadilo Máslo, které zdražilo bezmála dvojnásobně. A to z ceny 104,39 Kč za kilogram másla v roce 2006 na částku 207,08 Kč v roce 2018. Tímto si máslo připsalo průměrný meziroční nárůst 6,67 %.
+
+Nejvyšší meziroční propad cen byl zaznamenán u potraviny Rajská jablka červená kulatá, kdy byla Rajčata v roce 2007 o více než 30 % levnější než v roce předešlém. Ve stejném roce došlo i k rekordnímu nárůstu ceny Paprik, kdy cena za kilogram vyskočila o přibližně 95 % z ceny 35,31 Kč na 68,79 Kč.  
 
 
