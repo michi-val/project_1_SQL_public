@@ -49,9 +49,9 @@ FROM salary_price_1_4_help;
 ALTER TABLE t_price_salary_comp_1_4_fin
 ADD COLUMN difference_perc float;
 
--- naplnění sloupce daty (rozdíl je absolutní hodnota)
+-- naplnění sloupce daty 
 UPDATE t_price_salary_comp_1_4_fin
-SET difference_perc = abs(salary_comp_perc - price_comp_perc); 
+SET difference_perc = price_comp_perc - salary_comp_perc; 
 
 SELECT *
 FROM t_price_salary_comp_1_4_fin tpscf;
