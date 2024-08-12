@@ -16,7 +16,6 @@ Díky skutečnosti, že 57% růst průměrných platů mezi roky 2006 a 2018 z �
 V roce 2018 bylo možné za průměrný plat zakoupit přibližně 1319 kg chleba, což je o ~57 kg více, než v roce 2006. Mléko na tom bylo ještě lépe, kdy bylo možné zakoupit o ~205 l více a to přibližně 1614 l mléka.
 
 ## 1.3 Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
-
 Z celkově 27 sledovaných komodit v období let 2006 až 2018 došlo pouze u dvou ke zlevnění. 
 Největšímu poklesu ceny se těšil Cukr krystalový, který s počáteční cenou 21,73 Kč za kilogram klesl na 15,75 Kč při průměrném meziročním poklesu -1,92 %. Druhou komoditou s klesajícím trendem průměrných cen byla o -0,74 % Rajská jablka červená kulatá, která zlevnila z průměrných 57,83 Kč na 44,49 Kč za kilogram. 
 
@@ -25,4 +24,11 @@ Druhou příčku obsadilo Máslo, které zdražilo bezmála dvojnásobně. A to 
 
 Nejvyšší meziroční propad cen byl zaznamenán u potraviny Rajská jablka červená kulatá, kdy byla Rajčata v roce 2007 o více než 30 % levnější než v roce předešlém. Ve stejném roce došlo i k rekordnímu nárůstu ceny Paprik, kdy cena za kilogram vyskočila o přibližně 95 % z ceny 35,31 Kč na 68,79 Kč.  
 
+## 1.4 Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
+Ve sledovaném období nebyl zaznamenán rok, ve kterém by byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %). 
+K největšímu negativně dopadajícímu rozdílu došlo v roce 2013, kdy průměrná mzda klesla o  -1,56 % a průměrné cena vybraných komodit vzrostla o 5,55 %, tím došlo k 7,11% rozdílu. 
+
+V roce 2009 došlo k velkému poklesu průměrné ceny o -6,81 % a zvýšení platů o 3,25 %. Tato skutečnost pozitivně ovlivnila zákazníky, protože rozdíl mezi cenami a platy byl více než 10 % ve prospěch příjmů.
+
+Nutno podotknout, že ve dvou třetinách sledovaného období předčil nárůst průměrných mezd nárůst průměrné ceny vybraných komodit. Z toho lze odvodit, že kupní síla spotřebitele u těchto vybraných potravin v průměru vzrůstala. 
 
