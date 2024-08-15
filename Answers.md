@@ -32,3 +32,10 @@ V roce 2009 došlo k velkému poklesu průměrné ceny o -6,81 % a zvýšení pl
 
 Nutno podotknout, že ve dvou třetinách sledovaného období předčil nárůst průměrných mezd nárůst průměrné ceny vybraných komodit. Z toho lze odvodit, že kupní síla spotřebitele u těchto vybraných potravin v průměru vzrůstala. 
 
+## 1.5 Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo násdujícím roce výraznějším růstem?
+Na základě získaných dat z období 2006-2018 nelze s určitostí obecně říci, že by změny HDP za sledovanou periodu konstantě korelovaly se změnami průměrných mezd či průměrných cen vybraných potravin. 
+
+V letech 2009 a 2017 je sice možné sledovat, že při poklesu/růstu HDP reagoval vývoj mezd a cen podobně. Oproti tomu například v období let 2012-2015, kdy se HDP z mírného meziročního poklesu -0,79 % dostalo k velkému růstu 5,39 %, došlo k poklesu meziročního růstu cen z 6,94 % na -0,57 % a platy se kromě velkého, bezmála 1,6 % propadu v roce 2013, držely přibližně na stejné úrovni růstu. 
+
+Pro srovnání celého období bylo zjištěno: průměrný meziroční nárůst HDP činil přibližně 2,12 % při celkovém nárůstu o 28,14 %, meziroční nárůst mezd 3,88 % při celkovém nárůstu o 57,21 % a meziroční nárůst cen 2,90 % při celkovém nárůstu o 39,42 %. 
+
