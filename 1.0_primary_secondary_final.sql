@@ -4,16 +4,16 @@ CREATE OR REPLACE TABLE t_michael_faltynek_project_SQL_primary_final AS
 SELECT
 	cp.date_from 
 	,cp.date_to 
-	,cpc.code category_code
-	,cpc.name commodity_name
-	,cp.value price
-	,cpc.price_value ammount
-	,cpc.price_unit unit
+	,cpc.code AS category_code
+	,cpc.name AS commodity_name
+	,cp.value AS price
+	,cpc.price_value AS ammount
+	,cpc.price_unit AS unit
 	,cpay.payroll_year 
 	,cpay.industry_branch_code 
-	,cpay.value avg_salary
-	,cpu.name currency
-	,cpib.name industry_branch_name
+	,cpay.value AS avg_salary
+	,cpu.name AS currency
+	,cpib.name AS industry_branch_name
 FROM czechia_price cp 
 JOIN czechia_price_category cpc 
 	ON cp.category_code = cpc.code 
