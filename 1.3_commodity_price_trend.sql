@@ -7,14 +7,14 @@ WITH commodity_trend_help_data AS (
 		payroll_year 
 		,category_code 
 		,commodity_name 
-		,round(avg(price), 2) avg_price 
+		,round(avg(price), 2) AS avg_price 
 		,ammount 
 		,unit  
-	FROM t_michael_faltynek_project_sql_primary_final tmfpspf 
+	FROM t_michael_faltynek_project_sql_primary_final AS tmfpspf 
 	GROUP BY category_code, payroll_year)
 SELECT 
 	*
-	,lag(avg_price) OVER (ORDER BY category_code, payroll_year) previous_value
+	,LAG(avg_price) OVER (ORDER BY category_code, payroll_year) AS previous_value
 	,CASE
 		WHEN category_code != LAG(category_code) OVER (ORDER BY category_code, payroll_year) THEN  NULL 
 		WHEN LAG(category_code) OVER (ORDER BY category_code, payroll_year) IS NULL THEN NULL 
@@ -32,18 +32,18 @@ UPDATE t_value_comparison_avg_commodity_price_year
 SET comparison_perc = 
 	CASE 
 		WHEN comparison IS NULL THEN NULL 
-		ELSE round((((avg_price - previous_value) / previous_value) *100) , 2)
+		ELSE ROUND((((avg_price - previous_value) / previous_value) *100) , 2)
 	END;
 
 -- 
 SELECT *
-FROM t_value_comparison_avg_commodity_price_year tvcacpy;
+FROM t_value_comparison_avg_commodity_price_year AS tvcacpy;
 
 -- průměrný meziroční nárůst jednotlivých produktů za celé období vzestupně
 SELECT 
 	commodity_name 
-	,round(avg(comparison_perc),2) avg_price_trend
-FROM t_value_comparison_avg_commodity_price_year tvcacpy 
+	,ROUND(AVG(comparison_perc), 2) AS avg_price_trend
+FROM t_value_comparison_avg_commodity_price_year AS tvcacpy 
 GROUP BY category_code 
 ORDER BY avg_price_trend;
 
