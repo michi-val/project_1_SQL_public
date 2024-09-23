@@ -14,17 +14,17 @@ SELECT
 	,cpay.value AS avg_salary
 	,cpu.name AS currency
 	,cpib.name AS industry_branch_name
-FROM czechia_price cp 
-JOIN czechia_price_category cpc 
+FROM czechia_price AS cp 
+JOIN czechia_price_category AS cpc 
 	ON cp.category_code = cpc.code 
-JOIN czechia_payroll cpay
+JOIN czechia_payroll AS cpay
 	ON YEAR(cp.date_from) = cpay.payroll_year 
 	AND cpay.value_type_code = 5958 
     AND cp.region_code IS NULL
     AND calculation_code = 100
-JOIN czechia_payroll_unit cpu 
+JOIN czechia_payroll_unit AS cpu 
 	ON cpay.unit_code = cpu.code 
-JOIN czechia_payroll_industry_branch cpib 
+JOIN czechia_payroll_industry_branch AS cpib 
 	ON cpay.industry_branch_code = cpib.code 
 ORDER BY cp.date_from;
 
@@ -41,8 +41,8 @@ SELECT
 	,e.GDP 
 	,e.gini 
 	,e.population 
-FROM countries c 
-JOIN economies e 
+FROM countries AS c 
+JOIN economies AS e 
 	ON c.country = e.country 
 WHERE c.continent = 'Europe' 
 	AND e.`year` BETWEEN 2006 AND 2018
