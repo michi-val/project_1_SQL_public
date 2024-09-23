@@ -8,11 +8,11 @@ WITH milk_bread AS (
   SELECT *
   FROM 
     (SELECT 
-	    payroll_year
+	payroll_year
     	,commodity_name 
-    	,round(avg(price),2) price_avg_yearly
+    	,ROUND(AVG(price),2) AS price_avg_yearly
     	,currency 
-      FROM t_michael_faltynek_project_sql_primary_final tmfpspf 
+      FROM t_michael_faltynek_project_sql_primary_final AS tmfpspf 
       WHERE (payroll_year = 2006 OR payroll_year = 2018) 
       	AND (commodity_name LIKE '%Mléko polotučné pasterované%' 
       			OR commodity_name LIKE '%Chléb konzumní kmínový%')
@@ -20,8 +20,8 @@ WITH milk_bread AS (
   JOIN 
     (SELECT 
       payroll_year payroll_year_2
-      ,round(avg(avg_salary),2) salary_avg_yearly
-    FROM t_michael_faltynek_project_sql_primary_final tmfpspf 
+      ,ROUND(AVG(avg_salary),2) AS salary_avg_yearly
+    FROM t_michael_faltynek_project_sql_primary_final AS tmfpspf 
     WHERE  payroll_year = 2006 OR payroll_year = 2018
     GROUP BY payroll_year) AS b
       ON a.payroll_year = b.payroll_year_2)
@@ -30,8 +30,8 @@ WITH milk_bread AS (
   	,salary_avg_yearly
   	,commodity_name
   	,price_avg_yearly
-  	,round(salary_avg_yearly/price_avg_yearly,2) 'kg/l per year'
+  	,ROUND(salary_avg_yearly/price_avg_yearly,2) AS 'kg/l per year'
   FROM milk_bread;
 
 SELECT *
-FROM t_milk_bread tmb;
+FROM t_milk_bread AS tmb;
