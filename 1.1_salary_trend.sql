@@ -1,4 +1,4 @@
--- ## 1.1 Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
+-- 1.1 Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 
 -- vytvoření view pro extrakci dat o platech z tab. primary_final
 CREATE OR REPLACE VIEW v_salary_trend_help_data AS
