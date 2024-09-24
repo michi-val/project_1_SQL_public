@@ -33,7 +33,7 @@ FROM v_salary_trend_help_data;
 UPDATE t_value_comparison_avg_salary_year 
 SET comparison_perc = 	CASE 
 		       	 	WHEN comparison IS NULL THEN NULL  
-		        	ELSE round((((avg_salary_year - previous_value) / previous_value) *100) , 2)
+		        	ELSE ROUND((((avg_salary_year - previous_value) / previous_value) *100) , 2)
 	        	END;
 
 SELECT *  
