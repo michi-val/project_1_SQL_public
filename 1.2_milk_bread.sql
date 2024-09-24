@@ -16,10 +16,10 @@ WITH milk_bread AS (
       WHERE (payroll_year = 2006 OR payroll_year = 2018) 
       	AND (commodity_name LIKE '%Mléko polotučné pasterované%' 
       			OR commodity_name LIKE '%Chléb konzumní kmínový%')
-      GROUP BY payroll_year, commodity_name) AS a 
+      GROUP BY payroll_year, commodity_name, currency) AS a 
   JOIN 
     (SELECT 
-      payroll_year payroll_year_2
+      payroll_year AS payroll_year_2
       ,ROUND(AVG(avg_salary),2) AS salary_avg_yearly
     FROM t_michael_faltynek_project_sql_primary_final AS tmfpspf 
     WHERE  payroll_year = 2006 OR payroll_year = 2018
