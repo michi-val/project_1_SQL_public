@@ -8,7 +8,7 @@ SELECT
 	,AVG(avg_salary) AS avg_salary_year
 	,industry_branch_name 
 FROM t_michael_faltynek_project_sql_primary_final AS tmfpspf 
-GROUP BY industry_branch_code , payroll_year ;
+GROUP BY industry_branch_code, industry_branch_name, payroll_year;
 
 SELECT *
 FROM v_salary_trend_help_data AS vsthd;
@@ -26,11 +26,8 @@ SELECT
         	WHEN avg_salary_year > LAG(avg_salary_year) OVER (ORDER BY industry_branch_code , payroll_year) THEN ('higher')
         	ELSE 'not higher'
      	END AS comparison
+    	,CAST(NULL AS float) AS comparison_perc     -- přidání sloupce do tabulky pro dopočet procentuálního rozdílů platů
 FROM v_salary_trend_help_data;   
-
--- přidání sloupce do tabulky pro dopočet procentuálního rozdílů platů
-ALTER TABLE t_value_comparison_avg_salary_year 
-ADD COLUMN comparison_perc float;
 
 -- naplnění sloupce s procentuálním vyjádřením rozdílů platů v období 2006 - 2018
 UPDATE t_value_comparison_avg_salary_year 
