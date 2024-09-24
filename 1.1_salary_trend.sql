@@ -44,7 +44,7 @@ FROM t_value_comparison_avg_salary_year AS tvcasy ;
 -- průměrný meziroční nárůst jednotlivých odvětví za celé období
 SELECT 
 	industry_branch_name 
-	,round(AVG(comparison_perc),2) AS avg_salary_trend
+	,ROUND(AVG(comparison_perc),2) AS avg_salary_trend
 FROM t_value_comparison_avg_salary_year AS tvcasy
 GROUP BY industry_branch_code 
 ORDER BY avg_salary_trend;
