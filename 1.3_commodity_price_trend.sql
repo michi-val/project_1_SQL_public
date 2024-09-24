@@ -18,14 +18,11 @@ SELECT
 	,CASE
 		WHEN category_code != LAG(category_code) OVER (ORDER BY category_code, payroll_year) THEN  NULL 
 		WHEN LAG(category_code) OVER (ORDER BY category_code, payroll_year) IS NULL THEN NULL 
-    WHEN avg_price > LAG(avg_price) OVER (ORDER BY category_code, payroll_year) THEN ('higher')
-    ELSE 'not higher'
-  END AS comparison
+    		WHEN avg_price > LAG(avg_price) OVER (ORDER BY category_code, payroll_year) THEN ('higher')
+    		ELSE 'not higher'
+ 	END AS comparison
+	,CAST(NULL AS float) AS comparison_perc		-- přidání sloupce "comparison_perc" pro procentuální porovnání
 FROM commodity_trend_help_data;
-
--- přidání sloupce "comparison_perc" pro procentuální porovnání
-ALTER TABLE t_value_comparison_avg_commodity_price_year 
-ADD COLUMN comparison_perc float;
 
 -- naplnění comparison_perc
 UPDATE t_value_comparison_avg_commodity_price_year 
@@ -44,7 +41,7 @@ SELECT
 	commodity_name 
 	,ROUND(AVG(comparison_perc), 2) AS avg_price_trend
 FROM t_value_comparison_avg_commodity_price_year AS tvcacpy 
-GROUP BY category_code 
+GROUP BY commodity_name 
 ORDER BY avg_price_trend;
 
 
