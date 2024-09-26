@@ -16,16 +16,16 @@ FROM v_salary_trend_help_data AS vsthd;
 -- vytvoření tabulky s porovnáním platů vzestupně
 CREATE OR REPLACE TABLE t_value_comparison_avg_salary_year AS
 SELECT
-		LAG_help.payroll_year
-		,LAG_help.industry_branch_code 
-		,LAG_help.industry_branch_name 
-		,LAG_help.avg_salary_year
-		,LAG_help.previous_value
-		,CASE 
-			WHEN LAG_help.avg_salary_year > LAG_help.previous_value THEN ('higher')
-			WHEN LAG_help.avg_salary_year < LAG_help.previous_value THEN ('not higher')
-		END AS comparison
-		,ROUND((((LAG_help.avg_salary_year - LAG_help.previous_value) / LAG_help.previous_value) *100) , 2) AS comparison_perc
+	LAG_help.payroll_year
+	,LAG_help.industry_branch_code 
+	,LAG_help.industry_branch_name 
+	,LAG_help.avg_salary_year
+	,LAG_help.previous_value
+	,CASE 
+		WHEN LAG_help.avg_salary_year > LAG_help.previous_value THEN ('higher')
+		WHEN LAG_help.avg_salary_year < LAG_help.previous_value THEN ('not higher')
+	END AS comparison
+	,ROUND((((LAG_help.avg_salary_year - LAG_help.previous_value) / LAG_help.previous_value) *100) , 2) AS comparison_perc
 FROM (
 	SELECT
 		payroll_year
@@ -38,8 +38,6 @@ FROM (
 
 SELECT *  
 FROM t_value_comparison_avg_salary_year AS tvcasy ;
-
-
 
 
 
