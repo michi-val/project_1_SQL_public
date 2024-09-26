@@ -23,7 +23,7 @@ SELECT
 	,LAG_help.previous_value
 	,CASE 
 		WHEN LAG_help.avg_salary_year > LAG_help.previous_value THEN ('higher')
-		WHEN LAG_help.avg_salary_year < LAG_help.previous_value THEN ('not higher')
+		WHEN LAG_help.avg_salary_year <= LAG_help.previous_value THEN ('not higher')
 	END AS comparison
 	,ROUND((((LAG_help.avg_salary_year - LAG_help.previous_value) / LAG_help.previous_value) *100) , 2) AS comparison_perc
 FROM (
