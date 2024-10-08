@@ -7,7 +7,7 @@ WITH commodity_trend_help_data AS (
 		payroll_year 
 		,category_code 
 		,commodity_name 
-		,round(avg(price), 2) AS avg_price 
+		,round(AVG(price), 2) AS avg_price 
 		,ammount 
 		,unit  
 	FROM t_michael_faltynek_project_sql_primary_final AS tmfpspf 
