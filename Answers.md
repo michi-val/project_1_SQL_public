@@ -2,7 +2,7 @@
 Pro report bylo zvoleno časové období let 2006 - 2018, protože data z "czechia_price" jsou dostupná pouze v tomto časovém rozmezí. 
 
 ## 1.1 Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
-Globálně lze říci, že platy ve sledovaném období rostly ve všech odvětvích.  Z celkem 228 porovnávaných hodnot byl pokles zaznamenán pouze ve 23 případech. K největšímu poklesu mezd došlo v sektoru Peněžnictví a pojišťovnictví v roce 2013, kdy klesla průměrná mzda v oboru ze 49 706,50 Kč o 9 % na částku 45 233,50 Kč, v následujících letech mzda opět rostla. 
+Platy ve sledovaném období rostly téměř ve všech odvětvích.  Z celkem 228 porovnávaných hodnot byl pokles zaznamenán pouze ve 23 případech. K největšímu poklesu mezd došlo v sektoru Peněžnictví a pojišťovnictví v roce 2013, kdy klesla průměrná mzda v oboru ze 49 706,50 Kč o 9 % na částku 45 233,50 Kč, v následujících letech mzda opět rostla. 
 
 Nejhůře na tom byl s růstem platů sektor Peněžnictví a pojišťovnictví, kde byl zaznamenán průměrný meziroční nárůst mezd o 2,65 % a navýšení mezd za celé sledované období o 35,54 %.
 
