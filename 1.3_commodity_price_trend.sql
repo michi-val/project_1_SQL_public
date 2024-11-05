@@ -4,18 +4,18 @@
 
 CREATE OR REPLACE TABLE t_value_comparison_avg_commodity_price_year_new AS
 SELECT 
-	commodity_ss.payroll_year 
-	,commodity_ss.category_code
-	,commodity_ss.commodity_name 
-	,commodity_ss.ammount
-	,commodity_ss.unit
-	,commodity_ss.avg_price 
-	,commodity_ss.previous_value
+	payroll_year 
+	,category_code
+	,commodity_name 
+	,ammount
+	,unit
+	,avg_price 
+	,previous_value
 	,CASE
-		WHEN commodity_ss.avg_price > commodity_ss.previous_value THEN ('higher')
-		WHEN commodity_ss.avg_price < commodity_ss.previous_value THEN ('not higher')
+		WHEN avg_price > previous_value THEN ('higher')
+		WHEN avg_price < previous_value THEN ('not higher')
  	END AS comparison
- 	,ROUND((((commodity_ss.avg_price - commodity_ss.previous_value) / commodity_ss.previous_value) *100) , 2) AS comparison_perc
+ 	,ROUND((((avg_price - previous_value) / previous_value) *100) , 2) AS comparison_perc
 FROM (
 	SELECT 
 		payroll_year 
